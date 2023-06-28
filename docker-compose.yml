@@ -64,4 +64,14 @@ services:
 
 volumes:
   prometheus-data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/data/prometheus'
   grafana-data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/data/grafana'
